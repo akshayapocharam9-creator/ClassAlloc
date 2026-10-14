@@ -46,26 +46,7 @@ def main():
         st.session_state['solver_result'] = None
         st.session_state['runtime'] = 0.0
 
-    page = st.sidebar.radio(
-        "Navigation", 
-        [
-            "Solver Dashboard", 
-            "Analytics & Insights", 
-            "What-If Optimization Lab", 
-            "Pre-Flight Check", 
-            "Data Management",
-            "Presentation & Documentation"
-        ]
-    )
-    
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("""
-    **ClassAlloc — University Scheduling**  
-    *Constraint Satisfaction Problem (CSP)*  
-    **Developer:** Pocharam Akshaya  
-    **Course:** FOAI | 2026–27  
-    *Woxsen University*
-    """)
+    page = st.sidebar.radio("Navigation", ["Solver Dashboard", "Analytics & Insights", "What-If Optimization Lab", "Pre-Flight Check", "Data Management"])
     
     if page == "Solver Dashboard":
         render_dashboard()
@@ -97,11 +78,8 @@ def main():
     elif page == "Pre-Flight Check":
         import ui.preflight as preflight
         preflight.render_preflight_check()
-    elif page == "Data Management":
+    else:
         data_management.render_data_management(load_data)
-    elif page == "Presentation & Documentation":
-        import ui.presentation_docs as presentation_docs
-        presentation_docs.render_presentation_docs()
 
 def render_dashboard():
     # Header
