@@ -1,0 +1,93 @@
+[
+    {
+        "id": "CS305-LAB",
+        "name": "AI Lab",
+        "faculty": "Dr. Lee",
+        "student_count": 20,
+        "required_room_type": "Computer Lab",
+        "required_features": [
+            "Computers",
+            "Smart Board"
+        ],
+        "preferred_time_slots": [
+            "TS_FRI_1400"
+        ],
+        "section": "A"
+    },
+    {
+        "id": "DS401-A",
+        "name": "Big Data Analytics",
+        "faculty": "Dr. Chen",
+        "student_count": 45,
+        "required_room_type": "Lecture Hall",
+        "required_features": [
+            "Projector"
+        ],
+        "preferred_time_slots": [
+            "TS_MON_1400",
+            "TS_WED_1400"
+        ],
+        "section": "A"
+    },
+    {
+        "id": "PHY101-A",
+        "name": "Physics I",
+        "faculty": "Dr. Miller",
+        "student_count": 75,
+        "required_room_type": "Lecture Hall",
+        "required_features": [
+            "Projector",
+            "Whiteboard"
+        ],
+        "preferred_time_slots": [
+            "TS_TUE_1400",
+            "TS_THU_1400"
+        ],
+        "section": "A"
+    },
+    {
+        "id": "PHY101-LAB",
+        "name": "Physics I Lab",
+        "faculty": "Dr. Miller",
+        "student_count": 30,
+        "required_room_type": "Science Lab",
+        "required_features": [
+            "Lab Equipment"
+        ],
+        "preferred_time_slots": [
+            "TS_WED_1500"
+        ],
+        "section": "A"
+    },
+    {
+        "id": "MTH201-A",
+        "name": "Linear Algebra",
+        "faculty": "Dr. White",
+        "student_count": 55,
+        "required_room_type": "Lecture Hall",
+        "required_features": [
+            "Whiteboard"
+        ],
+        "preferred_time_slots": [
+            "TS_MON_1115",
+            "TS_WED_1115",
+            "TS_FRI_1115"
+        ],
+        "section": "A"
+    },
+    {
+        "id": "SEM400-A",
+        "name": "Senior Seminar",
+        "faculty": "Prof. Black",
+        "student_count": 15,
+        "required_room_type": "Seminar Room",
+        "required_features": [
+            "Video Conferencing"
+        ],
+        "preferred_time_slots": [
+            "TS_THU_1500",
+            "TS_THU_1600"
+        ],
+        "section": "A"
+    }
+]
