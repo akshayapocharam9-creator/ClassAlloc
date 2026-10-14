@@ -1,5 +1,12 @@
 # ClassAlloc — University Classroom Allocation System
 ### CSP-Based Intelligent Classroom Scheduling
+
+### 🌐 Live Website
+
+**[Launch ClassAlloc — University Classroom Allocation System](https://classalloc-akshaya.streamlit.app/)**
+
+Explore the live application, including the classroom scheduling solver and all five navigation pages.
+
 **Course:** Fundamentals of Artificial Intelligence (FOAI)  
 **Academic Year:** 2026–27 | **Institution:** Woxsen University  
 **Developer:** **Pocharam Akshaya** (Laxmi Pocharam) • Roll No: 25WU0102208
@@ -7,7 +14,7 @@
 ---
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://classalloc-akshaya.streamlit.app/)
 [![Tests](https://img.shields.io/badge/tests-91%2F91%20passing-brightgreen.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
