@@ -44,21 +44,21 @@ def render_timetable_explorer(allocations: List[Allocation]):
             faculty_filter=f_fac,
             section_filter=f_sec
         )
-        _render_entries_table(entries, has_sections)
+        _render_entries_table(entries, has_sections, key_prefix="univ")
 
     with selected_tab[1]: # Room View
         st.markdown("### Room Timetable")
         selected_room = st.selectbox("Select Classroom", classrooms[1:], key="r_room")
         if selected_room:
             entries = TimetableService.get_room_timetable(allocations, selected_room)
-            _render_entries_table(entries, has_sections)
+            _render_entries_table(entries, has_sections, key_prefix="room")
 
     with selected_tab[2]: # Faculty View
         st.markdown("### Faculty Timetable")
         selected_fac = st.selectbox("Select Faculty", faculty[1:], key="f_fac")
         if selected_fac:
             entries = TimetableService.get_faculty_timetable(allocations, selected_fac)
-            _render_entries_table(entries, has_sections)
+            _render_entries_table(entries, has_sections, key_prefix="fac")
 
     if has_sections:
         with selected_tab[3]: # Section View
@@ -66,9 +66,9 @@ def render_timetable_explorer(allocations: List[Allocation]):
             selected_sec = st.selectbox("Select Section", sections[1:], key="s_sec")
             if selected_sec:
                 entries = TimetableService.get_section_timetable(allocations, selected_sec)
-                _render_entries_table(entries, has_sections)
+                _render_entries_table(entries, has_sections, key_prefix="sec")
 
-def _render_entries_table(entries, has_sections):
+def _render_entries_table(entries, has_sections, key_prefix="view"):
     if not entries:
         st.info("No schedule found for the selected filters.")
         return
@@ -90,7 +90,7 @@ def _render_entries_table(entries, has_sections):
     
     with st.expander("Inspect Allocation Details", expanded=False):
         c_names = [e.course_name for e in entries]
-        sel_course = st.selectbox("Select Course to Inspect", c_names)
+        sel_course = st.selectbox("Select Course to Inspect", c_names, key=f"{key_prefix}_inspect_course")
         if sel_course:
             alloc = next((e.allocation for e in entries if e.course_name == sel_course), None)
             if alloc:
